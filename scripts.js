@@ -7,11 +7,10 @@ var trailCenter = [-78.464355,37.840157]
 
 $.getJSON('./data/centerline-merged.json', function(trailData) {
   var map = new mapboxgl.Map({
-    container: 'mapContainer', // HTML container id
+    container: 'map-container', // HTML container id
     style: 'mapbox://styles/mapbox/light-v9', // style URL
     center: trailCenter, // starting position as [lng, lat]
-    zoom: 3,
-
+    zoom: 3
     });
 
   // add airbnb data source
@@ -20,7 +19,6 @@ $.getJSON('./data/centerline-merged.json', function(trailData) {
         type: 'geojson',
         data: trailData
       });
-    console.log(trailData);
     // add centerline layer
     map.addLayer({
         id: 'trail-centerline',

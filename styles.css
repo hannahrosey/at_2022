@@ -1,0 +1,29 @@
+#parent-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content-area {
+  display: flex;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+#map-col {
+  width: 400;
+  height: 100%;
+  padding: 25px 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+}
+
+#message-board {
+  width: 400;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+}
